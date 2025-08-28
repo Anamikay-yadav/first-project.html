@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sports Brand Product List</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        .container {
+            width: 80%;
+            margin: auto;
+            overflow: hidden;
+        }
+        header {
+            background: #333;
+            color: white;
+            padding: 10px 0;
+            text-align: center;
+        }
+        .product-list {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+            margin-top: 20px;
+        }
+        .product {
+            background: white;
+            padding: 20px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+        .product img {
+            width: 100%;
+            height: 300px;
+        }
+        .product h3 {
+            margin: 10px 0;
+        }
+        .product p {
+            font-size: 14px;
+            color: #777;
+        }
+        .product .price {
+            font-size: 18px;
+            font-weight: bold;
+        }
+        .add-to-cart {
+            background: #333;
+            color: white;
+            border: none;
+            padding: 10px;
+            cursor: pointer;
+        }
+        .add-to-cart:hover {
+            background: #555;
+        }
+        .cart {
+            margin-top: 30px;
+            padding: 15px;
+            background: white;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+        .cart h2 {
+            margin-top: 0;
+        }
+        .cart-items {
+            margin-top: 10px;
+            list-style: none;
+            padding: 0;
+        }
+        .cart-items li {
+            margin: 5px 0;
+        }
+        .cart-total {
+            font-size: 18px;
+            font-weight: bold;
+            margin-top: 15px;
+        }
+        .checkout-btn {
+            background: #333;
+            color: white;
+            padding: 10px;
+            border: none;
+            cursor: pointer;
+            text-align: center;
+            width: 100%;
+        }
+        .checkout-btn:hover {
+            background: #555;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Product</h1>
+    </header>
+
+    <div class="container">
+        <div class="product-list">
+            <div class="product">
+                <img src="https://www.shutterstock.com/image-photo/hologram-shoes-sports-fitness-run-600nw-2240460409.jpg" alt="Athletic Running Shoes">
+                <h3>Men's Running Shoes</h3>
+                <p>Lightweight and breathable running shoes for maximum comfort and speed.</p>
+                <p class="price">$19.99</p>
+                <button class="add-to-cart" onclick="addToCart">Add to Cart</button>
+            </div>
+            <div class="product">
+                <img src="https://media.istockphoto.com/id/1346094881/photo/cropped-shot-of-an-unrecognizable-woman-tying-her-shoelaces-while-exercising-at-the-gym.jpg?s=612x612&w=0&k=20&c=MFlCV5osWA0t7r2oTP6PTzvfKoO2NUDhF40zzkomxGc=" alt="Women's Sports ">
+                <h3>Women's Sports shoes </h3>
+                <p>High-support sports  for comfort and flexibility during workouts.</p>
+                <p class="price">$21.99</p>
+                <button class="add-to-cart" onclick="addToCart">Add to Cart</button>
+            </div>
+            <div class="product">
+                <img src="https://m.media-amazon.com/images/I/71b5fW+s18L.jpg" alt="Yoga Mat">
+                <h3>Yoga Mat</h3>
+                <p>Non-slip yoga mat with extra cushioning for comfort.</p>
+                <p class="price">$15.99</p>
+                <button class="add-to-cart" onclick="addToCart">Add to Cart</button>
+            </div>
+            <div class="product">
+                <img src="https://t4.ftcdn.net/jpg/04/96/88/03/360_F_496880323_o1lo8LqdsRb5ndAuIlxKcUjHMfo2qjr9.jpg" alt="jersey">
+                <h3>Jersey</h3>
+                <p>comfortable and flexibility during sports.</p>
+                <p class="price">$49.99</p>
+                <button class="add-to-cart" onclick="addToCart">Add to Cart</button>
+            </div>
+            <div class="product">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT56LDJdGyvha52ijul-YiVhmieOJPjApQUCg&s" alt="sports wear">
+                <h3>Sports wear</h3>
+                <p>Comfortable and breathable  for games.</p>
+                <p class="price">$39.99</p>
+                <button class="add-to-cart" onclick="addToCart">Add to Cart</button>
+            </div>
+            <div class="product">
+                <img src="https://cdn.shopaccino.com/bfit/products/01-804683_l.jpg?v=521" alt="Wrist straps">
+                <h3>wrist straps</h3>
+                <p>Support for Cross fit Strength Workout and Power-Lifting</p>
+                <p class="price">$14.99</p>
+                <button class="add-to-cart" onclick="addToCart">Add to Cart</button>
+            </div>
+        </div>
+
+        <div class="cart">
+            <h2>Your Cart</h2>
+            <ul class="cart-items" id="cart-items">
+            
+            </ul>
+            <p class="cart-total" id="cart-total">Total: $0.00</p>
+            <button class="checkout-btn" onclick="checkout()">Proceed to Checkout</button>
+        </div>
+    </div>
+</body>
+</html>
+

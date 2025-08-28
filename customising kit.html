@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Custom Clothing Order</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #333;
+            color: white;
+            padding: 10px 20px;
+            text-align: center;
+        }
+        main {
+            padding: 20px;
+        }
+        .form-container {
+            background-color: #ffffff;
+            padding: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            margin: 20px auto;
+            width: 80%;
+            max-width: 600px;
+            background-color: #e9f7fc; /* Light blue background for the form */
+            border-radius: 10px;
+        }
+        .form-container h2 {
+            text-align: center;
+        }
+        label {
+            font-weight: bold;
+            display: block;
+            margin-bottom: 8px;
+        }
+        input[type="text"], input[type="email"], input[type="tel"], textarea, input[type="file"], input[type="url"], select {
+            width: 100%;
+            padding: 10px;
+            margin: 8px 0 15px 0;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+        button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 12px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            width: 100%;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Custom Clothing Order Form</h1>
+    </header>
+
+    <main>
+        <div class="form-container">
+            <h2>Design Your Own Clothing</h2>
+            <form action="/submit_order" method="post" enctype="multipart/form-data">
+                <label for="customer_name"> Name:</label>
+                <input type="text" id="customer_name" name="customer_name" required>
+
+                <label for="customer_email"> Email:</label>
+                <input type="email" id="customer_email" name="customer_email" required>
+
+                <label for="customer_phone">Phone Number:</label>
+                <input type="tel" id="customer_phone" name="customer_phone" required pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}">
+
+                <label for="clothing_type">Type of Clothing</label>
+                <input type="text" id="clothing_type" name="clothing_type" required>
+
+                <label for="clothing_size">Clothing Size:</label>
+                <select id="clothing_size" name="clothing_size" required>
+                    <option value="small">Small</option>
+                    <option value="medium">Medium</option>
+                    <option value="large">Large</option>
+                    <option value="xlarge">X-Large</option>
+                    <option value="xxlarge">XX-Large</option>
+                </select>
+
+                <label for="clothing_color">Clothing Color:</label>
+                <select id="clothing_color" name="clothing_color" required>
+                    <option value="red">Red</option>
+                    <option value="blue">Blue</option>
+                    <option value="green">Green</option>
+                    <option value="black">Black</option>
+                    <option value="white">White</option>
+                    <option value="yellow">Yellow</option>
+                    <option value="pink">Pink</option>
+                    <option value="gray">Gray</option>
+                    <option value="purple">Purple</option>
+                    <option value="orange">Orange</option>
+                </select>
+
+                <label for="design_description">Design Description:</label>
+                <textarea id="design_description" name="design_description" rows="4" ></textarea>
+
+                <label for="upload_image">Upload Design Image:</label>
+                <input type="file" id="upload_image" name="upload_image" accept="image/*">
+
+                <label for="design_link">Or Provide a Link to Your Design:</label>
+                <input type="url" id="design_link" name="design_link" >
+
+                <label for="additional_notes">Additional Notes or Customizations:</label>
+                <textarea id="additional_notes" name="additional_notes" rows="4"></textarea>
+
+                <button type="submit">Submit Customization</button>
+            </form>
+        </div>
+    </main>
+
+</body>
+</html>
